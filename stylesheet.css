@@ -1,0 +1,139 @@
+html {
+    --bg-color: #e2e8f0;
+    --accent-color: #cbd5e1;
+    --main-color: #64748b;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "aside header"
+    "aside main";
+}
+
+header {
+    grid-area: header;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.headerTop {
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerTop h2 {
+    margin: 0;
+}
+
+.headerBottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: end;
+}
+
+.nameDiv {
+    width: 100%;
+    color: var(--main-color);
+    padding-left: 10%;
+    padding-bottom: 2%;
+}
+
+.nameDiv h3, h4 {
+    margin: 10px;
+}
+
+.buttonDiv {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20%;
+}
+
+.buttonDiv button {
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    font-weight: bold;
+}
+aside {
+    grid-area: aside;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-rows: 10% 40% 40%;
+}
+
+aside div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    color: white;
+    margin-left: 10%;
+}
+
+.list li {
+    list-style: none;
+    color: white;
+    font-size: 1.7em;
+    margin-top: 20px;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 50px;
+}
+
+
+.projectContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.project {
+    background-color: white;
+    border-left: 5px solid var(--main-color);
+    box-shadow: 0 0 .3em .3em var(--accent-color);
+
+}
+
+.mainSidebar {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 50px;
+    margin-left: 10%;
+}
+
+.announcements, .trending {
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 0 .3em .3em var(--accent-color);
+}
