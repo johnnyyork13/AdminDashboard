@@ -48,13 +48,17 @@ header {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: end;
+    padding-bottom: 1%;
 }
 
 .nameDiv {
     width: 100%;
     color: var(--main-color);
-    padding-left: 10%;
-    padding-bottom: 2%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 10%;
 }
 
 .nameDiv h3, h4 {
@@ -64,8 +68,8 @@ header {
 .buttonDiv {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    margin-right: 20%;
+    justify-content: center;
+    padding-left: 30%;
 }
 
 .buttonDiv button {
@@ -91,9 +95,15 @@ aside div {
     margin-bottom: 20px;
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
 .logo h1 {
     color: white;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-right: 10%;
 }
 
 .list li {
@@ -110,22 +120,34 @@ main {
     padding: 50px;
 }
 
-
 .projectContainer {
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
 }
 
+.mainP {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
 .project {
     background-color: white;
     border-left: 5px solid var(--main-color);
     box-shadow: 0 0 .3em .3em var(--accent-color);
+}
 
+.project:hover, .mainSidebar div > div:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
 }
 
 .mainSidebar {
+    height: 100%;
     display: grid;
     grid-template-rows: 2fr 1fr;
     gap: 50px;
@@ -134,6 +156,7 @@ main {
 
 .announcements, .trending {
     background-color: white;
+    height: 100%;
     width: 100%;
     box-shadow: 0 0 .3em .3em var(--accent-color);
 }
