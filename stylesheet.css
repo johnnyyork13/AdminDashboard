@@ -58,7 +58,7 @@ header {
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-    padding-right: 10%;
+    margin-right: 20%;
 }
 
 .nameDiv h3, h4 {
@@ -67,9 +67,7 @@ header {
 
 .buttonDiv {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-left: 30%;
+    padding-left: 5%;
 }
 
 .buttonDiv button {
@@ -113,10 +111,15 @@ aside div {
     margin-top: 20px;
 }
 
+.list li:hover {
+    color: var(--accent-color);
+    cursor:pointer;
+}
+
 main {
     grid-area: main;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     padding: 50px;
 }
 
@@ -139,9 +142,33 @@ main {
     background-color: white;
     border-left: 5px solid var(--main-color);
     box-shadow: 0 0 .3em .3em var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.project:hover, .mainSidebar div > div:hover {
+
+.projectInfo {
+    width: 90%;
+    position: absolute; 
+    top: 10%;
+}
+
+.linkContainer {
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 10%;
+}
+
+.linkContainer img {
+    margin-right: 8%;
+}
+
+.project:hover {
     transition: 0.5s;
     transform: scale(1.1);
 }
@@ -150,6 +177,7 @@ main {
     height: 100%;
     display: grid;
     grid-template-rows: 2fr 1fr;
+    grid-template-columns: 90%;
     gap: 50px;
     margin-left: 10%;
 }
@@ -159,4 +187,17 @@ main {
     height: 100%;
     width: 100%;
     box-shadow: 0 0 .3em .3em var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcement {
+    width: 85%;
+    font-size: 90%;
+}
+
+.announcements > div:nth-child(1), .announcements > div:nth-child(2) {
+    border-bottom: 2px solid var(--accent-color);
 }
